@@ -1,1 +1,4 @@
-Just Set Latihan
+# Latihan
+
+Install Node 
+Install Vs Code
