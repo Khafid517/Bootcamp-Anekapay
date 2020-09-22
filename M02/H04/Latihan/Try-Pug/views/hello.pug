@@ -1,0 +1,10 @@
+html
+    head
+        title Hello
+        body
+            form(action="/hello", method="post")
+                input(type="text", name="name")
+                button(type="submit") submit
+
+            if data
+                h1 Hello #{data} !
