@@ -1,3 +1,3 @@
 # Latihan
 
-1. Latihan GraphQL          Done
+1. Latihan GraphQL          Perlu Belajar
