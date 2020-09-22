@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Book</title>
+</head>
+<body>
+    <center>
+        <h1>Add Book to Cart</h1>
+        <a href="../books" class="">back</a>
+        <form action="addCart" method="POST">
+            <% %>
+                <input name="_id" placeholder="id" value="<%= books._id %>" readonly required/> </br>
+                <input name="title" placeholder="judul" value="<%= books.title %>" readonly required/> </br>
+                <input name="author" placeholder="pengarang" value="<%= books.author %>" readonly required/> </br>
+                <input name="penerbit" placeholder="penerbit" value="<%= books.penerbit %>" readonly required/> </br>
+                <input name="tahun" placeholder="rahun terbit" value="<%= books.tahun %>" readonly required/> </br>
+                <input name="halaman" placeholder="jumlah halaman" value="<%= books.halaman %>" readonly required/> </br>
+                <input name="jumlah" placeholder="jumlah" value="" required/> </br>
+                <input name="harga" placeholder="harga" value="<%= books.harga %>" readonly required/> </br>
+                <input name="added_at" placeholder="added_at" value="<%= books.added_at %>" type="hidden" readonly required/>
+            <button class="btn btn-primary">Add</button>
+            <% %>
+        </form>
+    </center>
+</body>
+</html>

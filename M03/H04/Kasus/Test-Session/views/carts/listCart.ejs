@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cart</title>
+</head>
+<body>
+    <center>
+        <h1>My Cart</h1>
+        <br/>
+        <table>
+            <tr>
+                <th>no</th>
+                <th>title</th>
+                <th>jumlah</th>
+                <th>harga</th>
+                <th>aksi</th>
+            </tr>
+            <% let i = 0%>
+            <% cart.forEach(function(entry){%>
+            <tr>
+                <td><%= ++i %></td>
+                <td><%= entry.title %></td>
+                <td><%= entry.jumlah %></td>
+                <td><%= entry.harga %></td>
+                <td><a href="listCart/deleteCart/<%= entry._id %>">Delete</a><a href="listCart/updatePlus/<%= entry._id %>">Plus</a><a href="listCart/updateMinus/<%= entry._id %>">Minus</a></td>
+            </tr>
+            <% }) %>
+        </table>
+        <form action="checkout" method="POST">
+                <h3>Total</h3>
+                <input name="total" placeholder="added_at" value="<%= total %>" readonly required/>
+            <button class="">Beli</button>
+        </form>
+        <a href="../home/books">back</a>
+    </center>
+</body>
+</html>

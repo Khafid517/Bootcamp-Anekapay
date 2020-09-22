@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>History</title>
+</head>
+<body>
+    <center>
+        <h1>My History</h1>
+        <br/>
+        <table>
+            <tr>
+                <th>no</th>
+                <th>total</th>
+                <th>date</th>
+            </tr>
+            <% let i = 0%>
+            <% data.forEach(function(entry){%>
+            <tr>
+                <td><%= ++i %></td>
+                <td><%= entry.total %></td>
+                <td><%= entry.added_at %></td>
+            </tr>
+            <% }) %>
+        </table>
+        <a href="../home">back</a>
+    </center>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Books</title>
+</head>
+<body>
+    <center>
+        <h1>Books</h1>
+        <br/>
+        <a href="../home/listCart">my cart</a>
+        <table>
+            <tr>
+                <th>no</th>
+                <th>title</th>
+                <th>author</th>
+                <th>penerbit</th>
+                <th>tahun</th>
+                <th>halaman</th>
+                <th>jumlah</th>
+                <th>harga</th>
+                <th>aksi</th>
+            </tr>
+            <% let i = 0%>
+            <% data.forEach(function(entry){%>
+            <tr>
+                <td><%= ++i %></td>
+                <td><%= entry.title %></td>
+                <td><%= entry.author %></td>
+                <td><%= entry.penerbit %></td>
+                <td><%= entry.tahun %></td>
+                <td><%= entry.halaman %></td>
+                <td><%= entry.jumlah %></td>
+                <td><%= entry.harga %></td>
+                <td><a href="books/<%= entry._id %>">Add to Cart </a></td>
+            </tr>
+            <% }) %>
+        </table>
+        <a href="../home">back</a>
+    </center>
+</body>
+</html>
