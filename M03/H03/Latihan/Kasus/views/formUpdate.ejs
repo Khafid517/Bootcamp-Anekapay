@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Book</title>
+</head>
+<body>
+    <center>
+        <h1>Edit Book</h1>
+        <a href="/books/" class="">back</a>
+        <form action="../update" method="POST">
+            <% %>
+                <input name="_id" placeholder="id" value="<%= books._id %>" readonly required/> </br>
+                <input name="title" placeholder="judul" value="<%= books.title %>" required/> </br>
+                <input name="author" placeholder="pengarang" value="<%= books.author %>" required/> </br>
+                <input name="penerbit" placeholder="penerbit" value="<%= books.penerbit %>" required/> </br>
+                <input name="tahun" placeholder="rahun terbit" value="<%= books.tahun %>" required/> </br>
+                <input name="halaman" placeholder="jumlah halaman" value="<%= books.halaman %>" required/> </br>
+            <button class="btn btn-primary">edit</button>
+            <% %>
+        </form>
+    </center>
+</body>
+</html>

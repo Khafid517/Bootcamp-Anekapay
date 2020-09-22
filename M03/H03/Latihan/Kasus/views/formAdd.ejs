@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Book</title>
+</head>
+<body>
+    <center>
+        <h1>Add Book</h1>
+        <% if(message){%>
+        <h3><%= message %></h3>
+        <% }%> </br>
+        <a href="/books/" class="">back</a>
+        <form action="add" method="POST">
+            <input name="title" placeholder="judul" required/> </br>
+            <input name="author" placeholder="author" required/> </br>
+            <input name="penerbit" placeholder="penerbit" required/> </br>
+            <input name="tahun" placeholder="tahun terbit" required/> </br>
+            <input name="halaman" placeholder="jumlah halaman" required/> </br>
+            <button class="btn btn-primary">Add</button>
+        </form>
+    </center>
+</body>
+</html>
