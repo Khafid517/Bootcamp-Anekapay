@@ -1,2 +1,3 @@
 # Kasus 
 
+Glup            perlu belajarss
